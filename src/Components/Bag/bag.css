@@ -1,0 +1,30 @@
+.bag-container {
+  position: absolute;
+  z-index: 3;
+  right: 0;
+  width: 60%;
+  height: 40%;
+  border: 1px solid black;
+  background-color: white;
+  top: 14%;
+  overflow: auto;
+  position: fixed;
+}
+
+.bag-list {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.bag-list-item {
+  display: flex;
+  flex-direction: column;
+}
+
+button {
+  border: white;
+  background-color: #e05297;
+  padding: 10px;
+  margin-left: 5px;
+}

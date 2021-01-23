@@ -1,0 +1,147 @@
+* {
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+nav {
+  position: fixed;
+  background-color: white;
+  z-index: 2;
+  top: 0px;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 14%;
+  box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.05);
+}
+
+.nav-right {
+  display: flex;
+  flex-direction: row;
+  font-size: 0.85rem;
+  font-weight: bold;
+  letter-spacing: 0.8px;
+}
+
+li {
+  list-style: none;
+}
+
+.nav-links {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.nav-link {
+  margin: 15px;
+  cursor: pointer;
+}
+
+.nav-right .nav-link:hover {
+  color: #e05297;
+}
+
+.nav-search {
+  height: 40px;
+  background-color: rgb(245, 245, 246);
+  outline: none;
+  border: none;
+  width: 300px;
+}
+
+.brand-logo {
+  padding: 0;
+  margin: 0;
+  height: 40px;
+  width: 60px;
+}
+
+.bagged-item-count {
+  position: absolute;
+  color: red;
+  top: 14px;
+  right: 15px;
+}
+
+.nav-left .nav-link {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 0.8rem;
+  font-weight: bold;
+}
+
+.nav-link .fa {
+  font-size: 1rem;
+  margin: 2px;
+  color: black;
+}
+
+.bars {
+  display: none;
+  color: #e05297;
+}
+
+.search-btn {
+  display: none;
+}
+
+.active {
+  display: flex;
+  flex-direction: column;
+  font-size: 0.85rem;
+  font-weight: bold;
+  letter-spacing: 0.8px;
+  position: absolute;
+  top: 60px;
+  left: 110px;
+  margin: 5px;
+}
+
+@media screen and (max-width: 1000px) {
+  .nav-right {
+    display: none;
+  }
+  .bars {
+    display: flex;
+  }
+  .brand-logo {
+    display: flex;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .nav-search {
+    display: none;
+  }
+
+  .search-btn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 0.8rem;
+    font-weight: bold;
+  }
+
+  .fa-search {
+    margin-bottom: 5px;
+  }
+
+  .nav-link {
+    margin: 7px;
+  }
+}

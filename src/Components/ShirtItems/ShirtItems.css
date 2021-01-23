@@ -1,0 +1,95 @@
+.mini-nav {
+  margin-top: 100px;
+  width: 100%;
+}
+
+.mini-nav .nav-items {
+  display: flex;
+  flex-direction: row;
+}
+
+.product-img {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  cursor: pointer;
+}
+
+.product-img:hover {
+  box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.05);
+}
+
+.shirt-products-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: fit-content;
+}
+
+/* .shirt-product {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+  position: relative;
+} */
+
+.product span {
+  width: fit-content;
+  padding: 1px;
+  cursor: pointer;
+}
+
+.product-brand {
+  font-weight: bold;
+  font-size: 0.9rem;
+}
+
+.product-category {
+  font-size: 0.8rem;
+}
+
+.product-price {
+  font-size: 0.8rem;
+  font-weight: bold;
+}
+
+.product {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 25px;
+  width: fit-content;
+}
+
+.img-container {
+  position: relative;
+  width: 70%;
+}
+.wishlist {
+  position: absolute;
+  right: 0;
+  font-size: 20px;
+  color: grey;
+}
+
+.wishlist:hover {
+  color: #e05297;
+}
+
+.similar {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 80px;
+  height: 25px;
+  background-color: white;
+  margin: 10px;
+  border-radius: 10px;
+  font-size: 0.8rem;
+  line-height: 25px;
+  color: red;
+}
+
+.notvisible {
+  visibility: hidden;
+}
