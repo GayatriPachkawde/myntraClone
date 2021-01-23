@@ -15,7 +15,7 @@ const Bag = (props) => {
             <img className="bag-img" src={bag} alt="bag" />
           </>
         ) : (
-          props.baggedItems.map((product) => {
+          props.baggedItems.map((product, idx) => {
             return (
               <li className="bag-list-item" key={`shirt${product.src}`}>
                 <span className="cross" onClick={props.hidebag}>

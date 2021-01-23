@@ -20,9 +20,9 @@ const Filters = (props) => {
   return (
     <div className={`filter ${overflow}`}>
       {props.title === "Gender" ? (
-        props.data.map((item) => {
+        props.data.map((item, idx) => {
           return (
-            <div className="filter-item">
+            <div className="filter-item" key={`${item}${idx}`}>
               <input
                 type="radio"
                 className="checkbox"
@@ -42,7 +42,7 @@ const Filters = (props) => {
           {props.data.map((item, idx) => {
             if (idx < 7)
               return (
-                <div className="filter-item">
+                <div className="filter-item" key={`${item}${idx}`}>
                   <input
                     type="checkbox"
                     className="checkbox"
@@ -65,7 +65,7 @@ const Filters = (props) => {
             props.data.map((item, idx) => {
               if (idx > 7)
                 return (
-                  <div className="filter-item">
+                  <div className="filter-item" key={`${item}${idx}`}>
                     <input
                       type="checkbox"
                       className="checkbox"
