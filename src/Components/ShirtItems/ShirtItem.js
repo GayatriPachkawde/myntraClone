@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { useHistory } from "react-router-dom";
 import Similar from "../Similar/Similar";
 import ShirtData from "../Data/ShirtData";
@@ -9,7 +9,6 @@ const ShirtItem = (props) => {
     history.push(`./Shirts/buy/${product.id}`);
   };
   const [products, setproducts] = useState(props.data);
-  const [data, setData] = useState(props.data);
   const [bgcolor, setbgcolor] = useState("grey");
   const [showSimilar, setShowSimilar] = useState(false);
 
@@ -41,6 +40,7 @@ const ShirtItem = (props) => {
                   className="product-img"
                   src={product.src}
                   onClick={() => routetoBuy(product)}
+                  alt="product"
                 />
                 <span className={`wishlist`} onClick={changeColor}>
                   <i class="fa fa-heart" aria-hidden="true"></i>

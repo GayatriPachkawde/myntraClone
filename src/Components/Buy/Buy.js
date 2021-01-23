@@ -23,6 +23,7 @@ const Buy = ({ handler, location, match }) => {
                 e.stopPropagation();
                 setshowImage(true);
               }}
+              alt="product-img"
             />
           </div>
         </li>
@@ -90,7 +91,7 @@ const Buy = ({ handler, location, match }) => {
       {showImage ? (
         <>
           <div className="zoom-container">
-            <img src={product.src} className="zoom" />
+            <img src={product.src} className="zoom" alt="zoom" />
           </div>
         </>
       ) : null}

@@ -4,7 +4,7 @@ import "./shirts.css";
 import ShirtItems from "../ShirtItems/ShirtItems";
 import ShirtData from "../Data/ShirtData";
 
-const Shirts = () => {
+const Shirts = (props) => {
   const [filterData, setFilterData] = useState({ color: [], brand: [] });
   const [data, setData] = useState([]);
   const [filterSelected, setfilterSelected] = useState(false);
@@ -81,10 +81,19 @@ const Shirts = () => {
   return (
     <div className="container">
       <Filter addFilters={addFilters} removeFilter={removeFilter} />
-      <ShirtItems
-        data={filterSelected ? data : ShirtData}
-        updateSort={updateSort}
-      />
+      {props.search ? (
+        <ShirtItems
+          search={props.search}
+          data={props.search}
+          updateSort={updateSort}
+        />
+      ) : (
+        <ShirtItems
+          search={props.search}
+          data={filterSelected ? data : ShirtData}
+          updateSort={updateSort}
+        />
+      )}
     </div>
   );
 };

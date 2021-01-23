@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import Navbar from "./Components/Navbar/Navbar";
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import { BrowserRouter as Router, Route } from "react-router-dom";
 import Men from "./Components/Men/Men";
 import Shirts from "./Components/Shirts/Shirts";
 import Buy from "./Components/Buy/Buy";
@@ -9,6 +9,11 @@ import Homepage from "./Components/Homepage/Homepage";
 function App() {
   const [idsOfBaggedItems, setIdsofBaggedItems] = useState([]);
   const [number, setNumber] = useState(0);
+  const [search, setSearch] = useState([]);
+
+  const updateSearch = (arr) => {
+    setSearch(arr);
+  };
 
   const handler = (id, size, brand, src, price, category) => {
     const existingItem = idsOfBaggedItems.filter((item) => item.id === id);
@@ -43,6 +48,7 @@ function App() {
           number={number}
           baggedItems={idsOfBaggedItems}
           removeItems={removeBaggedItem}
+          handler={updateSearch}
         />
         <Route exact path="/">
           <Homepage />
@@ -52,6 +58,9 @@ function App() {
         </Route>
         <Route exact path="/men/Shirts">
           <Shirts />
+        </Route>
+        <Route exact path="/men/Shirts/search">
+          <Shirts search={search} />
         </Route>
         <Route
           exact

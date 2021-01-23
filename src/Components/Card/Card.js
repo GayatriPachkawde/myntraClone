@@ -11,13 +11,13 @@ const Card = (props) => {
     <div className="card">
       <div className="card-part" onClick={() => routeTosection(props.name1)}>
         <div className="card-img-container">
-          <img className="img" src={props.img1}></img>
+          <img className="img" src={props.img1} alt="card"></img>
         </div>
         <div className="img-details">{props.name1}</div>
       </div>
       <div className="card-part" onClick={() => routeTosection(props.name2)}>
         <div className="card-img-container">
-          <img className="img" src={props.img2}></img>
+          <img className="img" src={props.img2} alt="card"></img>
         </div>
         <div className="img-details">{props.name2}</div>
       </div>

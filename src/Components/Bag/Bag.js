@@ -1,6 +1,5 @@
 import React from "react";
 import "./bag.css";
-import ShirtData from "../Data/ShirtData";
 import bag from "../Images/bag.PNG";
 
 const Bag = (props) => {
@@ -13,7 +12,7 @@ const Bag = (props) => {
             <span className="cross" onClick={props.hidebag}>
               X
             </span>
-            <img className="bag-img" src={bag} />
+            <img className="bag-img" src={bag} alt="bag" />
           </>
         ) : (
           props.baggedItems.map((product) => {
@@ -23,7 +22,7 @@ const Bag = (props) => {
                   X
                 </span>
                 <div className="img-container">
-                  <img className="product-img" src={product.src} />
+                  <img className="product-img" src={product.src} alt="shirt" />
                 </div>
                 <span className="size">{product.size}</span>
                 <span className="product-brand">{product.brand}</span>

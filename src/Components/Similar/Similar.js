@@ -19,7 +19,7 @@ const Similar = (props) => {
                 className="img-container"
                 onClick={() => routetoBuy(product)}
               >
-                <img className="product-img" src={product.src} />
+                <img className="product-img" src={product.src} alt="product" />
               </div>
               <span
                 onClick={() => routetoBuy(product)}

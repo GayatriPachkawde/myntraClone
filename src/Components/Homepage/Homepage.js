@@ -13,9 +13,24 @@ const Homepage = () => {
   };
   return (
     <div className="homepage-container">
-      <img className="homepage-img" src={fp_1} onClick={RouteTomenSection} />
-      <img className="homepage-img" src={fp_2} onClick={RouteTomenSection} />
-      <img className="homepage-img" src={fp_3} onClick={RouteTomenSection} />
+      <img
+        className="homepage-img"
+        src={fp_1}
+        onClick={RouteTomenSection}
+        alt="decorative"
+      />
+      <img
+        className="homepage-img"
+        src={fp_2}
+        onClick={RouteTomenSection}
+        alt="decorative"
+      />
+      <img
+        className="homepage-img"
+        src={fp_3}
+        onClick={RouteTomenSection}
+        alt="decorative"
+      />
     </div>
   );
 };
