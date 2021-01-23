@@ -19,6 +19,10 @@ const Navbar = (props) => {
   const showBagComponent = () => {
     setShowbag(!showbag);
   };
+
+  const hidebag = () => {
+    setShowbag(false);
+  };
   return (
     <>
       <nav className="navbar">
@@ -62,16 +66,22 @@ const Navbar = (props) => {
             <i class="fa fa-bookmark-o" aria-hidden="true"></i>Wishlist
           </li>
           <li className="nav-link" onClick={showBagComponent}>
-            <i class="fa fa-shopping-bag" aria-hidden="true"></i>
-            Bag
-            {props.number === 0 ? null : (
-              <span className="bagged-item-count">{props.number}</span>
-            )}
+            <div className="nav-bag">
+              <i class="fa fa-shopping-bag" aria-hidden="true"></i>
+              Bag
+              {props.number === 0 ? null : (
+                <span className="bagged-item-count">{props.number}</span>
+              )}
+            </div>
           </li>
         </ul>
       </nav>
       {showbag ? (
-        <Bag baggedItems={props.baggedItems} removeItems={props.removeItems} />
+        <Bag
+          baggedItems={props.baggedItems}
+          removeItems={props.removeItems}
+          hidebag={hidebag}
+        />
       ) : null}
     </>
   );

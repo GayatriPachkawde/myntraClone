@@ -4,11 +4,11 @@
   right: 0;
   width: 60%;
   height: 40%;
-  border: 1px solid black;
   background-color: white;
   top: 14%;
   overflow: auto;
   position: fixed;
+  box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.05);
 }
 
 .bag-list {
@@ -20,6 +20,12 @@
 .bag-list-item {
   display: flex;
   flex-direction: column;
+}
+
+.bag-img {
+  width: 200px;
+  height: 150px;
+  margin: auto;
 }
 
 button {

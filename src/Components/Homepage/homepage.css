@@ -1,0 +1,13 @@
+.homepage-img {
+  width: 90%;
+  margin-bottom: 30px;
+  cursor: pointer;
+}
+
+.homepage-container {
+  margin-top: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}

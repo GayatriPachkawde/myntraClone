@@ -55,6 +55,12 @@ li {
   color: #e05297;
 }
 
+.nav-bag {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
 .nav-search {
   height: 40px;
   background-color: rgb(245, 245, 246);
@@ -71,10 +77,16 @@ li {
 }
 
 .bagged-item-count {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background-color: red;
+  line-height: 15px;
   position: absolute;
-  color: red;
-  top: 14px;
-  right: 15px;
+  color: white;
+  text-align: center;
+  right: -2px;
+  top: -8px;
 }
 
 .nav-left .nav-link {

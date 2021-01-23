@@ -6,10 +6,10 @@ const Types = ["Men", "Women", "Boys", "Girls"];
 const Colors = ["Blue", "Lightblue", "Grey", "Black"];
 
 const Brand = [
-  "Parx",
-  "Blackberrys",
-  "Park Avenue",
-  "Roadster",
+  "HIGHLANDER",
+  "Dennis-Lingo",
+  "Mast&Harbour",
+  "HERENOW",
   "Louis Philippe",
   "Peter England",
   "ColorPlus",

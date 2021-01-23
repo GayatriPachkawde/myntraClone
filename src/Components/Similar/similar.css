@@ -6,13 +6,17 @@
   bottom: -10%;
   background-color: white;
   width: 85%;
-  overflow: auto;
   justify-content: center;
+  overflow-x: scroll;
 }
 
 .view-similar-container .product-img {
   width: 130px;
   height: 180px;
+}
+
+.view-similar-container li {
+  margin: 10px;
 }
 
 .cross {

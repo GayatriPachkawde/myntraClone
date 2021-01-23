@@ -6,6 +6,13 @@
 .mini-nav .nav-items {
   display: flex;
   flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin: 20px;
+}
+
+.mini-nav li {
+  margin-left: 20px;
 }
 
 .product-img {
@@ -27,13 +34,19 @@
   width: fit-content;
 }
 
-/* .shirt-product {
-  display: flex;
-  flex-direction: column;
-  margin-bottom: 20px;
-  position: relative;
-} */
+select {
+  width: 170px;
+  height: 30px;
+  outline: none;
+}
 
+option {
+  padding: 30px;
+}
+
+.mini-nav li {
+  font-weight: bold;
+}
 .product span {
   width: fit-content;
   padding: 1px;

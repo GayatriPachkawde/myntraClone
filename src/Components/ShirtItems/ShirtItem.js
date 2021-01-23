@@ -1,25 +1,34 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useHistory } from "react-router-dom";
 import Similar from "../Similar/Similar";
+import ShirtData from "../Data/ShirtData";
 
 const ShirtItem = (props) => {
   const history = useHistory();
   const routetoBuy = (product) => {
     history.push(`./Shirts/buy/${product.id}`);
   };
-
+  const [products, setproducts] = useState(props.data);
+  const [data, setData] = useState(props.data);
+  const [bgcolor, setbgcolor] = useState("grey");
   const [showSimilar, setShowSimilar] = useState(false);
 
-  const [products, setproducts] = useState(props.data);
-
   const showSimilarComponent = (brand) => {
-    const filteredArr = props.data.filter((product) => product.brand === brand);
+    const filteredArr = ShirtData.filter((product) => product.brand === brand);
     setproducts(filteredArr);
     setShowSimilar(true);
   };
 
   const hidesimilar = () => {
     setShowSimilar(false);
+  };
+
+  const changeColor = () => {
+    if (bgcolor === "grey") {
+      setbgcolor("pink");
+    } else {
+      setbgcolor("grey");
+    }
   };
   return (
     <>
@@ -33,7 +42,7 @@ const ShirtItem = (props) => {
                   src={product.src}
                   onClick={() => routetoBuy(product)}
                 />
-                <span className="wishlist">
+                <span className={`wishlist`} onClick={changeColor}>
                   <i class="fa fa-heart" aria-hidden="true"></i>
                 </span>
                 <span
